@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eden Manufacturing & Robotics</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-theme="dark">
+
+    <!-- Header Navigation -->
+    <nav class="header-nav">
+        <a href="#" class="logo" id="logo-refresh">Eden Manufacturing & Robotics</a>
+        <!-- Dark/Light Mode toggle SVG -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+            <svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <!-- Sun/Moon path updated dynamically in JS or uses generic shape -->
+                <path class="sun-path"
+                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                </path>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Main Hero Section -->
+    <main class="hero-section" id="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Designed in Toledo Ohio.<br>Built for Humanity.</h1>
+            <p class="hero-subtitle">Precision additive manufacturing and AI-embedded robotics.</p>
+            <div class="hero-cta">
+                <button class="btn primary-btn" data-modal="about-modal">Our Heritage</button>
+                <button class="btn secondary-btn" data-modal="robotics-modal">Smart Manufacturing</button>
+                <button class="btn secondary-btn" data-modal="contact-modal">Partnership</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Container -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <!-- Modals -->
+    <div class="modal" id="about-modal">
+        <button class="close-modal">&times;</button>
+        <div class="modal-content">
+            <h2>Our Heritage</h2>
+            <div class="modal-body">
+                <p>Rooted in the Toledo/Midwest manufacturing corridor, Eden Manufacturing & Robotics transitions
+                    traditional Rust Belt grit
+                    into the next-gen Silicon Heartland.</p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <p><strong>30+ Years</strong> native to the Apple ecosystem.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <p>Designed on Mac. Deployed with Eden. Optimized by Apple Intelligence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Robotics Modal -->
+    <div class="modal" id="robotics-modal">
+        <button class="close-modal">&times;</button>
+        <div class="modal-content">
+            <h2>Smart Manufacturing & Robotics</h2>
+            <div class="modal-body">
+                <p>We leverage AI Machine Learning Vision (MLV) capabilities for autonomous quality assurance. Our
+                    hardware features Industrial Voron-style tool-changers optimized for robotics materials including
+                    PPA carbon fiber, PEI, TPU and more.</p>
+
+                <!-- PyScript Embedded Component -->
+                <div class="vision-container" id="vision-terminal">
+                    <h3><span class="status-indicator"></span>Neural Engine Vision System</h3>
+                    <div id="log-output" class="terminal-output"> Eden Manufacturing & Robotics Terminal v4.2<br>Ready
+                        for
+                        diagnostics.<br><br>[ CLICK TO INITIALIZE TELEMETRY ]</div>
+                    <div id="final-score" class="confidence-score">100.00%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="contact-modal">
+        <button class="close-modal">&times;</button>
+        <div class="modal-content contact-content">
+            <h2>Partnership</h2>
+            <div class="modal-body">
+                <p>Interested in transforming your additive manufacturing pipeline?</p>
+                <a href="mailto:maxwell.sikorski@gmail.com" class="btn primary-btn email-btn">Contact Us</a>
+                <div class="branding-badge">
+                    <p>Eden Manufacturing & Robotics: Onshoring the Future.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GSAP & Main Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- PyScript Component Logic -->
+    <script type="py">
+        import asyncio
+        from pyscript import when, document
+
+        diagnostics = [
+            "Capturing optical layer telemetry...",
+            "Analyzing carbon-fiber infill matrix...",
+            "Verifying micron-level dimensional accuracy...",
+            "Cross-referencing digital twin parameters...",
+            "Part recognized: Robotic Actuator Housing (v4.2)",
+            "Born-Qualified Status: VERIFIED."
+        ]
+
+        is_running = False
+
+        @when("click", "#vision-terminal")
+        async def run_simulation(event):
+            global is_running
+            if is_running:
+                return
+            
+            is_running = True
+            log_div = document.querySelector("#log-output")
+            score_div = document.querySelector("#final-score")
+            
+            # Reset state for re-runs
+            log_div.innerHTML = "Initializing VL-JEPA Models...<br>Awaiting telemetry from Eden Manufacturing & Robotics Tool-Changer..."
+            score_div.style.opacity = "0"
+            
+            for step in diagnostics:
+                await asyncio.sleep(0.8)
+                log_div.innerHTML += f"<br>> {step}"
+            
+            await asyncio.sleep(0.5)
+            score_div.style.opacity = "1"
+            log_div.innerHTML += "<br><br><strong>SYSTEM READY FOR DEPLOYMENT.</strong>"
+            is_running = False
+    </script>
+</body>
+
+</html>
