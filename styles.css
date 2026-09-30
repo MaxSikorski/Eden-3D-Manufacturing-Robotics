@@ -87,6 +87,30 @@ p {
     letter-spacing: -0.02em;
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.header-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.header-link:hover {
+    opacity: 1;
+}
+
 .theme-toggle {
     background: none;
     border: none;
@@ -108,7 +132,7 @@ p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
+    padding: 108px 20px 88px;
 }
 
 .hero-title {
@@ -121,7 +145,7 @@ p {
 
 .hero-subtitle {
     font-size: clamp(1.2rem, 2vw, 1.5rem);
-    max-width: 600px;
+    max-width: 640px;
     margin: 0 auto 40px;
     opacity: 0;
     transform: translateY(30px);
@@ -279,6 +303,12 @@ p {
     flex-direction: column;
 }
 
+.nano-banana-gallery figure {
+    margin: 0;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
 @media (min-width: 600px) {
     .nano-banana-gallery {
         flex-direction: row;
@@ -287,9 +317,33 @@ p {
 
 .gallery-img {
     width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
     border-radius: 16px;
     object-fit: cover;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: block;
+    background: rgba(128, 128, 128, 0.15);
+}
+
+.modal-body a {
+    color: inherit;
+    text-underline-offset: 3px;
+}
+
+.engage-list {
+    margin: 28px 0 8px;
+    padding-left: 1.15rem;
+}
+
+.engage-list li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.engage-list li::marker {
+    color: var(--text-color);
 }
 
 .caption {
@@ -395,7 +449,11 @@ p {
 }
 
 .email-btn {
-    margin: 30px 0 50px;
+    margin: 30px 0 16px;
+}
+
+.contact-content .caption {
+    margin-bottom: 36px;
 }
 
 .branding-badge {
@@ -404,10 +462,89 @@ p {
     opacity: 0.8;
 }
 
+.site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.55rem;
+    padding: 14px 24px 20px;
+    font-size: 0.85rem;
+    letter-spacing: -0.01em;
+    opacity: 0.65;
+}
+
+.site-footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    opacity: 1;
+}
+
+/* Short windows: keep the hero buttons above the footer */
+@media (max-height: 640px) {
+    .hero-section {
+        padding-top: 84px;
+        padding-bottom: 76px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.2rem, 5vw, 3.4rem);
+    }
+
+    .hero-subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 22px;
+    }
+}
+
+@media (max-height: 560px) {
+    .hero-section {
+        padding-top: 72px;
+        padding-bottom: 64px;
+    }
+
+    .hero-title {
+        font-size: 1.85rem;
+        margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 14px;
+    }
+
+    .btn {
+        padding: 10px 18px;
+    }
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
     .header-nav {
         padding: 20px;
+        flex-wrap: wrap;
+        row-gap: 12px;
+    }
+
+    .logo {
+        font-size: 1.15rem;
+        line-height: 1.2;
+    }
+
+    .header-actions {
+        gap: 14px;
+    }
+
+    .header-link {
+        font-size: 0.9rem;
     }
 
     .modal-content {
