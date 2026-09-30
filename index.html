@@ -16,33 +16,55 @@
 
 <body data-theme="dark">
 
+    <!--
+      CONTACT EMAIL PLACEHOLDER
+      This repo had no public inbox — only a bumpmail.io throwaway, which is not used here.
+      Replace REPLACE_WITH_YOUR_EMAIL@example.com in both mailto: links (header is not one of them;
+      the contact button opens the modal). Footer and the contact modal share the same address.
+    -->
+
     <!-- Header Navigation -->
     <nav class="header-nav">
         <a href="#" class="logo" id="logo-refresh">Eden Manufacturing & Robotics</a>
-        <!-- Dark/Light Mode toggle SVG -->
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
-            <svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <!-- Sun/Moon path updated dynamically in JS or uses generic shape -->
-                <path class="sun-path"
-                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
-                </path>
-            </svg>
-        </button>
+        <div class="header-actions">
+            <a class="header-link" href="https://maxsikorski.github.io/3d-printing-weekly-news/">News</a>
+            <a class="header-link" href="https://maxsikorski.github.io/curve-cut/">Products</a>
+            <button type="button" class="header-link" data-modal="contact-modal">Contact</button>
+            <!-- Dark/Light Mode toggle SVG -->
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <svg id="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Sun/Moon path updated dynamically in JS or uses generic shape -->
+                    <path class="sun-path"
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                    </path>
+                </svg>
+            </button>
+        </div>
     </nav>
 
     <!-- Main Hero Section -->
     <main class="hero-section" id="hero-section">
         <div class="hero-content">
             <h1 class="hero-title">Designed in Toledo Ohio.<br>Built for Humanity.</h1>
-            <p class="hero-subtitle">Precision additive manufacturing and AI-embedded robotics.</p>
+            <p class="hero-subtitle">A Toledo print farm for custom robotics and parts. Midwest manufacturing, from Max Sikorski — founder of Eden 3D.</p>
             <div class="hero-cta">
-                <button class="btn primary-btn" data-modal="about-modal">Our Heritage</button>
-                <button class="btn secondary-btn" data-modal="robotics-modal">Smart Manufacturing</button>
-                <button class="btn secondary-btn" data-modal="contact-modal">Partnership</button>
+                <button class="btn primary-btn" data-modal="about-modal">Our Story</button>
+                <button class="btn secondary-btn" data-modal="robotics-modal">What We Build</button>
+                <button class="btn secondary-btn" data-modal="contact-modal">Get in Touch</button>
             </div>
         </div>
     </main>
+
+    <footer class="site-footer">
+        <span>Toledo</span>
+        <span class="footer-dot" aria-hidden="true">·</span>
+        <a href="mailto:REPLACE_WITH_YOUR_EMAIL@example.com?subject=Eden%203D%20%E2%80%94%20Get%20in%20Touch">Email</a>
+        <span class="footer-dot" aria-hidden="true">·</span>
+        <a href="https://maxsikorski.github.io/3d-printing-weekly-news/">News</a>
+        <span class="footer-dot" aria-hidden="true">·</span>
+        <a href="https://github.com/MaxSikorski/Eden-3D-Manufacturing-Robotics">GitHub</a>
+    </footer>
 
     <!-- Modal Container -->
     <div class="modal-overlay" id="modal-overlay"></div>
@@ -51,21 +73,43 @@
     <div class="modal" id="about-modal">
         <button class="close-modal">&times;</button>
         <div class="modal-content">
-            <h2>Our Heritage</h2>
+            <h2>Our Story</h2>
             <div class="modal-body">
-                <p>Rooted in the Toledo/Midwest manufacturing corridor, Eden Manufacturing & Robotics transitions
-                    traditional Rust Belt grit
-                    into the next-gen Silicon Heartland.</p>
+                <p>The name on the door of this site is Eden Manufacturing &amp; Robotics. The shop is Eden 3D, in Toledo, founded by Max Sikorski.</p>
                 <div class="timeline">
                     <div class="timeline-item">
                         <span class="timeline-dot"></span>
-                        <p><strong>30+ Years</strong> native to the Apple ecosystem.</p>
+                        <p><strong>Print farm.</strong> Short runs and one-off production prints out of Toledo.</p>
                     </div>
                     <div class="timeline-item">
                         <span class="timeline-dot"></span>
-                        <p>Designed on Mac. Deployed with Eden. Optimized by Apple Intelligence.</p>
+                        <p><strong>Custom robotics and parts.</strong> Housings, fixtures, and machine pieces — designed around the job and printed in the material that fits.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <p><strong>The meetup.</strong> A weekly Midwest 3D printing club: news, show-and-tell, and shop talk. <a href="https://maxsikorski.github.io/3d-printing-weekly-news/">Weekly news</a> and the <a href="https://www.meetup.com/3d-printing-club/" target="_blank" rel="noopener noreferrer">Meetup group</a> are both open.</p>
                     </div>
                 </div>
+                <!--
+                  Photo slots. No shop photos were in the repo.
+                  Replace each SVG with a jpg, png, or webp (same folder is fine) and update the src.
+                  Suggested files: images/print-farm.jpg, images/custom-parts.jpg, images/meetup.jpg
+                -->
+                <div class="nano-banana-gallery">
+                    <figure>
+                        <img class="gallery-img" src="images/print-farm.svg" alt="Placeholder for a photo of the Toledo print farm" width="800" height="600">
+                        <figcaption class="caption">Print farm</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="gallery-img" src="images/custom-parts.svg" alt="Placeholder for a photo of custom robotics parts" width="800" height="600">
+                        <figcaption class="caption">Custom parts</figcaption>
+                    </figure>
+                    <figure>
+                        <img class="gallery-img" src="images/meetup.svg" alt="Placeholder for a photo of the Midwest 3D printing meetup" width="800" height="600">
+                        <figcaption class="caption">Meetup</figcaption>
+                    </figure>
+                </div>
+                <p class="caption">Drop shop photos in the images folder and point these three slots at them.</p>
             </div>
         </div>
     </div>
@@ -74,11 +118,14 @@
     <div class="modal" id="robotics-modal">
         <button class="close-modal">&times;</button>
         <div class="modal-content">
-            <h2>Smart Manufacturing & Robotics</h2>
+            <h2>What We Build</h2>
             <div class="modal-body">
-                <p>We leverage AI Machine Learning Vision (MLV) capabilities for autonomous quality assurance. Our
-                    hardware features Industrial Voron-style tool-changers optimized for robotics materials including
-                    PPA carbon fiber, PEI, TPU and more.</p>
+                <p>Print-farm runs and custom robotics parts from the Toledo shop. The hardware includes Voron-style tool-changers, in materials such as PPA carbon fiber, PEI, and TPU.</p>
+                <ul class="engage-list">
+                    <li>Send a file, a photo, or a sketch. An STL, 3MF, STEP, or a rough drawing is enough to start.</li>
+                    <li>Say the material, how many you need, and what the part has to survive — heat, flex, or a robot.</li>
+                    <li>Cutting a model to fit a bed, or scaling past it? <a href="https://maxsikorski.github.io/curve-cut/">Curve Cut</a> draws the split in the browser and exports print-ready pieces.</li>
+                </ul>
 
                 <!-- PyScript Embedded Component -->
                 <div class="vision-container" id="vision-terminal">
@@ -96,12 +143,13 @@
     <div class="modal" id="contact-modal">
         <button class="close-modal">&times;</button>
         <div class="modal-content contact-content">
-            <h2>Partnership</h2>
+            <h2>Get in Touch</h2>
             <div class="modal-body">
-                <p>Interested in transforming your additive manufacturing pipeline?</p>
-                <a href="mailto:3dmax.ow6p08@bumpmail.io" class="btn primary-btn email-btn">Contact Us</a>
+                <p>Print farm work, a custom part, or a robotics job — email Max. If you are local, the weekly meetup is an easy way to say hello in person.</p>
+                <a href="mailto:REPLACE_WITH_YOUR_EMAIL@example.com?subject=Eden%203D%20%E2%80%94%20Get%20in%20Touch" class="btn primary-btn email-btn">Email Max</a>
+                <p class="caption">Stand-in address: REPLACE_WITH_YOUR_EMAIL@example.com. Swap it in index.html for a real inbox.</p>
                 <div class="branding-badge">
-                    <p>Eden Manufacturing & Robotics: Onshoring the Future.</p>
+                    <p>Eden Manufacturing &amp; Robotics · Toledo</p>
                 </div>
             </div>
         </div>
