@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Custom parts photo placeholder">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Custom parts photo placeholder">
   <rect width="800" height="600" fill="#1c1c1e"/>
   <rect x="16" y="16" width="768" height="568" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2"/>
-  <text x="400" y="276" text-anchor="middle" fill="#ffffff" font-family="Inter, Helvetica, Arial, sans-serif" font-size="32" font-weight="600">Custom parts</text>
-  <text x="400" y="324" text-anchor="middle" fill="#ffffff" fill-opacity="0.62" font-family="Inter, Helvetica, Arial, sans-serif" font-size="18">Replace images/custom-parts.svg</text>
+  <text x="400" y="286" text-anchor="middle" fill="#ffffff" font-family="Inter, Helvetica, Arial, sans-serif" font-size="48" font-weight="600">Custom parts</text>
+  <text x="400" y="340" text-anchor="middle" fill="#ffffff" fill-opacity="0.62" font-family="Inter, Helvetica, Arial, sans-serif" font-size="22">Drop a photo here</text>
 </svg>
